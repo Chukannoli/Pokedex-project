@@ -4,9 +4,6 @@ const searchInput = document.querySelector(".search-input");
 const numberFilter = document.querySelector("#number");
 const nameFilter = document.querySelector("#name");
 const notFoundMessage = document.querySelector("#not-found-message");
-console.log(nameFilter);
-console.log(notFoundMessage);
-console.log(numberFilter);
 let allPokemon = [];
 
 const getPokemon = async () => {
@@ -16,26 +13,12 @@ const getPokemon = async () => {
     );
     const data = await response.json();
     allPokemon = data.results;
-    console.log(allPokemon);
     renderPokemon(allPokemon);
   } catch (error) {
     console.error("Could not fetch pokemon");
   }
 };
 getPokemon();
-/*
-const getPokemonNew2 = async (id) => {
-  try {
-    const [pokemon, pokemonSpecies] = await fetch(
-      `https://pokeapi.co/api/v2/pokemon/${id}`
-    );
-    const pokemonData = await pokemon.json();
-    const pokemonSpeciesData = await pokemonSpecies.json();
-  } catch (error) {
-    console.error(error);
-  }
-};
-*/
 
 async function getPokemonNew(id) {
   try {
@@ -84,8 +67,7 @@ function renderPokemon(pokemonArray) {
     listWrapper.append(listItem);
   });
 }
-console.log(searchInput);
-console.log(window);
+
 searchInput.addEventListener("keyup", handleSearch);
 
 function handleSearch() {
