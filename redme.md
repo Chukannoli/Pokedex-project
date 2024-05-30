@@ -10,3 +10,6 @@ Upcoming Features
 Save Favorites: Users will be able to save their favorite Pokémon to a personalized list.
 Filter Pokémon: Filter Pokémon by type, ability, or other criteria.
 Detailed Pokémon View: Click on a Pokémon to view detailed information, including stats, abilities, and evolutions.
+
+github: https://github.com/Chukannoli/Pokedex-project.git
+netlify: https://pokechuka.netlify.app
