@@ -81,27 +81,6 @@ function renderPokemon(pokemonArray) {
     nameWrap.append(name);
     listItem.append(numberWrap, imageWrap, nameWrap);
 
-    /*
-    listItem.innerHTML = `
-    <div class="number-wrap">
-      <p class="caption-fonts">${pokemonID}</p>
-    </div>
-    <div class="img-wrap">
-    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonID}.png" alt="" />
-    </div>
-    <div class="name-wrap">
-    <p class="body3-fonts">${pokemon.name}</p>
-  </div>
-    `;
-*/
-
-    listItem.addEventListener("click", async () => {
-      const success = await getPokemonNew(pokemonID);
-      if (success) {
-        window.location.href = `./details.html?id=${pokemonID}`;
-      }
-    });
-
     listWrapper.append(listItem);
   });
 }
